@@ -72,13 +72,13 @@ Como já dito anteriormente, este projeto é um detector de ações, utilizando 
 
 4.2 Configuração da Aplicação na Nuvem
 
-- Editar o arquivo X.php com as suas informações do firebase;
+- Editar o arquivo firebaseTest.php com as suas informações do firebase;
 
-- Carregar os arquivos firebaseTest.php e X.php na sua aplicação na nuvem(neste projeto é utilizado o Heroku);
+- Carregar os arquivos firebaseTest.php e firebaseLib.php na sua aplicação na nuvem(neste projeto é utilizado o Heroku);
 
 4.3 Configuração do Arduino
 
-- Baixar o código Arduino.ino, alterar as configurações de rede(IP, gateway e subnet) para uma válida em sua rede e carregar no arduino uno;
+- Baixar o código arduino.ino, alterar as configurações de rede(IP, gateway e subnet) para uma válida em sua rede e carregar no arduino uno;
 
 - Conectar o Ethernet Shield no arduino;
 
