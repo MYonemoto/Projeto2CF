@@ -26,7 +26,7 @@ Os componentes utilizados neste projeto foram:
 
 - 1 sensor de movimento;
 
-- 1 sensor de proximidade;
+- 1 sensor ultrassônico (proximidade);
 
 - 1 sensor de luminosidade;
 
@@ -56,6 +56,42 @@ O ethernet shield é um componente que permite que uma placa Arduino faça conex
 
 3. Funcionamento
 
-Como já dito anteriormente, este projeto é um detector de ações, utilizando sensores de movimento, proximidade e de luminosidade. Porém, nao basta apenas detectar essas ações e não gerar um alerta. Dessa forma, utilizando a plataforma Firebase, essas ações detectadas são salvas para que o usuário possa saber quando houve tal ação. Sem entrar em muitos detalhes, o Firebase é uma plataforma de desenvolvimento mobile e web, na qual disponibiliza diversos serviços diferentes que auxiliam no desenvolvimento e gerenciamento de aplicativos.
+Como já dito anteriormente, este projeto é um detector de ações, utilizando sensores de movimento, proximidade e de luminosidade. Porém, nao basta apenas detectar essas ações e não gerar um alerta. Dessa forma, essas ações detectadas são enviadas para uma plataforma nuvem chamado Heroku, na qual essas informações são processadas e enviadas ao banco de dados. Através de uma aplicação do Firebase, as informações do banco de dados são exibidas ao usuário em uma página web.
 
-Heroku, Firebase
+4. Como Reproduzir o Projeto
+
+4.1 Configuração do Firebase
+
+- Criar um projeto no firebase;
+
+- Habilitar a leitura e escrita no arquivo de configuração do banco de dados;
+
+- Salvar sua chave secreta de acesso ao banco de dados(Configurações do Projeto -> Contas de Serviço -> Chaves secretas);
+
+- Salvar credenciais de acesso ao banco de dados(Clicar em Adicionar o Firebase ao seu aplicativo da Web);
+
+4.2 Configuração da Aplicação na Nuvem
+
+- Editar o arquivo X.php com as suas informações do firebase;
+
+- Carregar os arquivos firebaseTest.php e X.php na sua aplicação na nuvem(neste projeto é utilizado o Heroku);
+
+4.3 Configuração do Arduino
+
+- Baixar o código Arduino.ino, alterar as configurações de rede(IP, gateway e subnet) para uma válida em sua rede e carregar no arduino uno;
+
+- Conectar o Ethernet Shield no arduino;
+
+- Ligar o cabo de controle do sensor de movimento na porta 7 do Ethernet Shield;
+
+- Ligar o cabo de controle do sensor ultrassônico nas portas 4(trig) e 5(echo) do Ethernet Shield;
+
+- Ligar o cabo de controle do sensor de luminosidade na porta A0 do Ethernet Shield;
+
+- Conectar a energia e o terra de todos os sensores e do laser;
+
+- Conectar o cabo de rede no Ethernet Shield;
+
+4.4 Configuração da Aplicação Frontend
+
+- Carregar os arquivos index.html e app.js para seu servidor de hosting(neste projeto utilizamos o hosting do firebase);
