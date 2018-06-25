@@ -56,6 +56,6 @@ O ethernet shield é um componente que permite que uma placa Arduino faça conex
 
 3. Funcionamento
 
-
+Como já dito anteriormente, este projeto é um detector de ações, utilizando sensores de movimento, proximidade e de luminosidade. Porém, nao basta apenas detectar essas ações e não gerar um alerta. Dessa forma, utilizando a plataforma Firebase, essas ações detectadas são salvas para que o usuário possa saber quando houve tal ação. Sem entrar em muitos detalhes, o Firebase é uma plataforma de desenvolvimento mobile e web, na qual disponibiliza diversos serviços diferentes que auxiliam no desenvolvimento e gerenciamento de aplicativos.
 
 Heroku, Firebase
